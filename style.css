@@ -1,0 +1,90 @@
+:root{
+  --bg:#0b1220;
+  --ink:#0f172a;
+  --ink-2:#334155;
+  --muted:#64748b;
+  --card:#ffffff;
+  --brand:#2563eb;
+  --brand-2:#22c55e;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;
+  color:var(--ink);
+  background:#f6f8fb;
+}
+
+/* Brand bar */
+.brandbar{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:10}
+.container{max-width:1100px;margin:auto;padding:0 16px}
+.brandbar-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-badge{background:var(--brand-2);color:#fff;font-size:12px;font-weight:700;padding:6px 10px;border-radius:999px}
+.brand-name{font-size:20px;line-height:1.1;margin:0;font-weight:800;letter-spacing:.2px}
+.brand-contact{display:flex;gap:8px;flex-wrap:wrap}
+.contact-pill{background:#eef2ff;border:1px solid #c7d2fe;color:#1e3a8a;padding:8px 12px;border-radius:999px;font-weight:600;text-decoration:none}
+
+/* Hero */
+.hero{
+  min-height:56vh;
+  background-image:
+    linear-gradient(180deg, rgba(7,11,19,.45), rgba(7,11,19,.55)),
+    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop');
+  background-size:cover;background-position:center;
+  display:grid;place-items:center;
+}
+.hero-overlay{width:100%;height:100%}
+.hero-content{color:#fff;text-align:center;padding:80px 0}
+.hero-content h2{font-size:40px;line-height:1.1;margin:0 0 10px}
+.hero-content p{opacity:.9;margin:0 0 18px}
+.btn{display:inline-block;padding:12px 18px;border-radius:12px;background:#0ea5e9;color:#fff;text-decoration:none;font-weight:700;border:none;cursor:pointer}
+.btn-primary{background:var(--brand)}
+
+/* Sections */
+.section{padding:56px 0;background:#fff}
+.section-alt{background:#f8fafc}
+.section-head h3{margin:0 0 6px;font-size:26px}
+.section-head p{margin:0 0 18px;color:var(--muted)}
+
+/* Car grid */
+.car-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:900px){.car-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.car-grid{grid-template-columns:1fr}}
+.car-card{background:var(--card);border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .15s, box-shadow .15s}
+.car-card:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(2,6,23,.08)}
+.car-card img{width:100%;height:160px;object-fit:cover;display:block}
+.car-info{display:flex;align-items:center;justify-content:space-between;padding:12px 12px}
+.car-info h4{margin:0;font-size:16px}
+.chip{background:#e2e8f0;border-radius:999px;padding:4px 8px;color:#0f172a;font-size:12px}
+
+/* Booking */
+.booking{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+  background:#fff;border:1px solid #e5e7eb;padding:16px;border-radius:16px
+}
+@media (max-width:900px){.booking{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.booking{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+label{font-weight:600;font-size:13px}
+select{height:44px;border:1px solid #dbe3ea;border-radius:10px;padding:0 10px;font-size:15px;background:#fff}
+.summary{grid-column:1/-1;display:flex;gap:24px;align-items:center;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:12px;padding:10px 12px}
+.summary strong{margin-right:6px}
+.actions{grid-column:1/-1;display:flex;gap:10px;flex-wrap:wrap}
+.help{grid-column:1/-1;color:var(--muted);margin:0}
+
+/* Footer */
+.footer{background:#0b1220;color:#cbd5e1;padding:28px 0;margin-top:40px}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.footer h4{color:#fff;margin:0 0 6px}
+.footer .btn{background:#1f2937}
+.footer .btn-primary{background:#2563eb}
+
+/* QR modal */
+.qr-modal::backdrop{background:rgba(2,6,23,.6)}
+.qr-card{border:none;border-radius:16px;padding:18px;background:#fff;max-width:360px}
+.qr-card h3{margin:0 0 6px}
+#qrCaption{color:var(--muted);margin:0 0 10px}
+.qrcode{display:grid;place-items:center;border:1px dashed #e2e8f0;border-radius:12px;padding:10px;background:#fff}
+.qr-actions{margin-top:12px;text-align:right}
