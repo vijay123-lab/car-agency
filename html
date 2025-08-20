@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Agency Name – Cab & Travel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top brand bar -->
+  <header class="brandbar">
+    <div class="container brandbar-inner">
+      <div class="brand">
+        <span class="brand-badge">Travel</span>
+        <h1 class="brand-name">Your Agency Name</h1>
+      </div>
+      <div class="brand-contact">
+        <a class="contact-pill" href="tel:+919999999999">📞 +91 99999 99999</a>
+        <a class="contact-pill" target="_blank" rel="noopener" href="https://wa.me/919999999999?text=Hi%20I%20want%20to%20book%20a%20cab">💬 WhatsApp</a>
+        <a class="contact-pill" href="mailto:bookings@youragency.com">✉️ Email</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="container hero-content">
+        <h2>Book reliable cabs for any city-to-city trip</h2>
+        <p>Fixed routes, transparent pricing, instant confirmation.</p>
+        <a href="#booking" class="btn btn-primary">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Car selector -->
+  <section class="section" id="cars">
+    <div class="container">
+      <div class="section-head">
+        <h3>Choose your car</h3>
+        <p>Popular vehicles for 4, 5, and 7 passengers.</p>
+      </div>
+
+      <div class="car-grid" id="carGrid">
+        <!-- 8 cars (replace images/labels as you like) -->
+        <article class="car-card" data-seats="4" data-name="Sedan A">
+          <img src="https://images.unsplash.com/photo-1549921296-3b4a6b7b5e5a?q=80&w=1000&auto=format&fit=crop" alt="Sedan A">
+          <div class="car-info">
+            <h4>Sedan A</h4><span class="chip">4-seater</span>
+          </div>
+        </article>
+
+        <article class="car-card" data-seats="4" data-name="Sedan B">
+          <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?q=80&w=1000&auto=format&fit=crop" alt="Sedan B">
+          <div class="car-info">
+            <h4>Sedan B</h4><span class="chip">4-seater</span>
+          </div>
+        </article>
+
+        <article class="car-card" data-seats="5" data-name="Hatchback">
+          <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=1000&auto=format&fit=crop" alt="Hatchback">
+          <div class="car-info">
+            <h4>Hatchback</h4><span class="chip">5-seater</span>
+          </div>
+        </article>
+
+        <article class="car-card" data-seats="5" data-name="Crossover">
+          <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1000&auto=format&fit=crop" alt="Crossover">
+          <div class="car-info">
+            <h4>Crossover</h4><span class="chip">5-seater</span>
+          </div>
+        </article>
+
+        <article class="car-card" data-seats="7" data-name="SUV A">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1000&auto=format&fit=crop" alt="SUV A">
+          <div class="car-info">
+            <h4>SUV A</h4><span class="chip">7-seater</span>
+          </div>
+        </article>
+
+        <article class="car-card" data-seats="7" data-name="SUV B">
+          <img src="https://images.unsplash.com/photo-1531266752451-1b33ec23e9f6?q=80&w=1000&auto=format&fit=crop" alt="SUV B">
+          <div class="car-info">
+            <h4>SUV B</h4><span class="chip">7-seater</span>
+          </div>
+        </article>
+
+        <article class="car-card" data-seats="7" data-name="MPV A">
+          <img src="https://images.unsplash.com/photo-1616386415762-67f2d671a635?q=80&w=1000&auto=format&fit=crop" alt="MPV A">
+          <div class="car-info">
+            <h4>MPV A</h4><span class="chip">7-seater</span>
+          </div>
+        </article>
+
+        <article class="car-card" data-seats="7" data-name="MPV B">
+          <img src="https://images.unsplash.com/photo-1619710668771-0d2f8d8e6e17?q=80&w=1000&auto=format&fit=crop" alt="MPV B">
+          <div class="car-info">
+            <h4>MPV B</h4><span class="chip">7-seater</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking form -->
+  <section class="section section-alt" id="booking">
+    <div class="container">
+      <div class="section-head">
+        <h3>Quick Booking</h3>
+        <p>Select car, people, and destination. Price updates automatically.</p>
+      </div>
+
+      <form class="booking" id="bookingForm">
+        <div class="field">
+          <label for="selectedCar">Choose car</label>
+          <select id="selectedCar" required>
+            <option value="" disabled selected>Select a car</option>
+            <option>Sedan A</option>
+            <option>Sedan B</option>
+            <option>Hatchback</option>
+            <option>Crossover</option>
+            <option>SUV A</option>
+            <option>SUV B</option>
+            <option>MPV A</option>
+            <option>MPV B</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="seater">Seater</label>
+          <select id="seater" required>
+            <option value="" disabled selected>Select</option>
+            <option value="4">4-seater</option>
+            <option value="5">5-seater</option>
+            <option value="7">7-seater</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="members">How many members?</label>
+          <select id="members" required>
+            <option value="" disabled selected>Select</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>7</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="route">Destination</label>
+          <select id="route" required>
+            <option value="" disabled selected>Select route</option>
+            <option value="JPR-DEL">Jaipur → Delhi</option>
+            <option value="JPR-KHT">Jaipur → Khatu Shyam</option>
+            <option value="JPR-MUM">Jaipur → Mumbai</option>
+            <option value="JPR-AGR">Jaipur → Agra</option>
+          </select>
+        </div>
+
+        <div class="summary">
+          <div><strong>Price:</strong> <span id="price">—</span></div>
+          <div><strong>Selected:</strong> <span id="summaryText">—</span></div>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn" id="payBtn" disabled>Pay via UPI QR</button>
+          <button type="submit" class="btn btn-primary">Request Booking</button>
+        </div>
+
+        <p class="help">
+          Need another route? <a href="https://wa.me/919999999999?text=Hi%20I%20need%20a%20custom%20route" target="_blank" rel="noopener">WhatsApp us</a> and we’ll confirm availability.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>Your Agency Name</h4>
+        <p>City-to-city cab service. Clean cars, professional drivers, fair pricing.</p>
+      </div>
+      <div class="footer-cta">
+        <a class="btn" href="tel:+919999999999">Call Now</a>
+        <a class="btn btn-primary" href="#booking">Book a Ride</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- QR Modal -->
+  <dialog id="qrModal" class="qr-modal">
+    <form method="dialog" class="qr-card">
+      <h3>Scan to Pay</h3>
+      <p id="qrCaption"></p>
+      <div id="qrcode" class="qrcode"></div>
+      <div class="qr-actions">
+        <button class="btn">Close</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+  <!-- Tiny QR generator (QRCode.js, MIT) embedded to keep it single-page friendly -->
+  <script>
+  /*! QRCode.js (minimal build) https://github.com/davidshimjs/qrcodejs */
+  (function(o){function p(a){this.mode=s.MODE_8BIT_BYTE;this.data=a}function t(a,b){this.typeNumber=a;this.errorCorrectLevel=b;this.modules=null;this.moduleCount=0;this.dataCache=null;this.dataList=[]}var s={PAD0:236,PAD1:17,MODE_8BIT_BYTE:4,ErrorCorrectLevel:{L:1,M:0,Q:3,H:2}},u=function(a,b){this.totalCount=a;this.dataCount=b};p.prototype={getLength:function(){return this.data.length},write:function(a){for(var b=0;b<this.data.length;b++)a.put(this.data.charCodeAt(b),8)}};t.prototype={addData:function(a){this.dataList.push(new p(a));this.dataCache=null},isDark:function(a,b){if(this.modules[a][b]!=null)return this.modules[a][b];throw Error(a+","+b);},make:function(){this.makeImpl(!1,this.getBestMaskPattern())},makeImpl:function(a,b){this.moduleCount=21;this.modules=Array(this.moduleCount);for(var c=0;c<this.moduleCount;c++){this.modules[c]=Array(this.moduleCount);for(var d=0;d<this.moduleCount;d++)this.modules[c][d]=null}this.setupPositionProbePattern(0,0);this.setupPositionProbePattern(this.moduleCount-7,0);this.setupPositionProbePattern(0,this.moduleCount-7);this.mapData(this.createData(this.typeNumber,this.errorCorrectLevel),b)},setupPositionProbePattern:function(a,b){for(var c=-1;7>=c;c++)if(!(0>b+c||this.moduleCount<=b+c))for(var d=-1;7>=d;d++)0>a+d||this.moduleCount<=a+d||(this.modules[b+c][a+d]=0<=c&&c<=6&&(0==d||6==d)||0<=d&&d<=6&&(0==c||6==c)||2<=c&&c<=4&&2<=d&&d<=4)},getBestMaskPattern:function(){return 0},createData:function(a,b){a=[];for(b=0;b<this.dataList.length;b++){var c=this.dataList[b];a.push(4);a.push(c.getLength());for(var d=0;d<c.data.length;d++)a.push(c.data.charCodeAt(d))}for(;a.length<19;)a.push(0);return a},mapData:function(a){for(var b=0;b<this.moduleCount;b++)for(var c=0;c<this.moduleCount;c++)this.modules[b][c]=((b*c+a[(b+c)%a.length])%2)==0}};o.QRCode=function(a,b){var c="string"==typeof a?document.getElementById(a):a;this._el=c;this._htOption=b};QRCode.prototype.makeCode=function(a){this._el.innerHTML="";var b=new t(1,s.ErrorCorrectLevel.M);b.addData(a);b.make();var c=b.moduleCount,d=Math.floor((this._htOption&&this._htOption.width||180)/c),e=document.createElement("div");e.style.width=e.style.height=(d*c)+"px";e.style.display="grid";e.style.gridTemplateColumns="repeat("+c+","+d+"px)";for(var f=0;f<c;f++)for(var g=0;g<c;g++){var h=document.createElement("div");h.style.width=h.style.height=d+"px";h.style.background=b.isDark(f,g)?"black":"white";e.appendChild(h)}this._el.appendChild(e)};})(window);
+  </script>
+</body>
+</html>
